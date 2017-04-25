@@ -1,66 +1,25 @@
+# Cardboard Universe
 
+This is a simple demo that displays detailed models of planets using Google's VR SDK.  Originally started as a fork of [GVR-SceneKit](https://github.com/AndrianBdn/GVR-SceneKit), a boilerplate app for displaying SceneKit scenes in Google's VR.  
 
+Most of this project was done during a hackathon, so your mileage may vary.
 
-# GVR-SceneKit
+Hopefully this will launch on the App Store soon.  
 
-This is an example of using Apple SceneKit with [iOS Google Virtual Reality SDK](https://github.com/googlevr/gvr-ios-sdk) for using with [Google Cardboard](https://vr.google.com/cardboard/).
-
-Currently (early <strike>June 2016</strike> April 2017) it is the easiest way to develop VR app on the iPhone. Hope this is going to change after WWDC <strike>2016</strike> 2017.
-
-The project codename is ’VRBoilerplate’ and initially it was prepared for iOS programming competition for [uadevchallenge 2016](http://uawebchallenge.com/). It supports  both Objective-C and Swift.
-
-
-## Installing 
-
-Install CocoaPods, open VRBoilerplate.xcworkspace, start coding. 
-
+Feel free to mess around with the source code, but please don't rip this off and put it on the App Store.
 
 ## Usage 
 
-To create and manage scene, you need to implement a class based on VRControllerProtocol.
+Build and install the app, and toss your phone in a cardboard viewer.  Make sure you scan the QR code on your viewer to make sure the VR is aligned and in focus.
 
-Than specify that class in Info.plist under VRControllerClass key. 
+## TODO
 
-If you’re using Swift, you need to specify Obj-C runtime class name
+-Icon
 
-```swift 
-@objc(VRControllerSwift)
-class VRControllerSwift : NSObject, VRControllerProtocol {
-// ...
-```
+-Launch Screen
 
+-Submit to Store
 
-## VRControllerProtocol 
+-Forwards and backwards head movement for zooming
 
-Very simple protocol that contains init-constructor and three methods. 
-
-### - scene 
-
-Read-only property that should return SCNScene. Can’t be null, the scene should not be changed during VRController object lifetime. 
-
-### - prepareFrameWithHeadTransform:
-
-The method is called before each frame (one time for both eyes). Argument is head rotation from GVR SDK. 
-
-You can use prepareFrameWithHeadTransform: as a game loop body.
-
-### - eventTriggered
-
-This method is called when magnet on Cardboard is ‘clicked’ (or if there there are tap on Simulator window) 
-
-
-
-## Implementation Details 
-
-- Viewer is at the point (0, 0, 0) looking around. The project does not takes into account SCNCamera objects in Scene. After app start the viewer is looking at the direction (0, 0, -1). The direction which viewer is holding Cardboard in the real word is going to be (0, 0, -1) in VR. 
-
-- There are number of problems with integration of GVR and SceneKit. Since GVR is closed source, they are more like ‘known issues’ like now. 
-
-	- reflectivity (.reflectivity > 0) does not work for SCNFloor 
-	
-	- SpriteKit scenes are not working as a materials 
-	
-	- There are two warning during build: … direct access in gvr::Singleton gvr::ServerLogger ::GetInstance() to global weak symbol — see [issue](https://github.com/googlevr/gvr-ios-sdk/issues/22) in GVR project. 
-
-
-
+-Add acknowledgements for data sources
