@@ -217,6 +217,7 @@ class VRControllerSwift : NSObject, VRControllerProtocol {
         let skyNode = SCNNode(geometry: skyBox)
         skyNode.name = "skyBox"
         skyNode.position = SCNVector3(0, 0, 0)
+        scene.rootNode.addChildNode(skyNode)
         
         //scene.background.contents = UIImage(named: "sky.jpg")
         
@@ -262,7 +263,8 @@ class VRControllerSwift : NSObject, VRControllerProtocol {
     
     func prepareFrame(with headTransform: GVRHeadTransform) {
         
-        planetNode.position = headTransform.rotateVector(SCNVector3(0, -2/3, -2));
+        planetNode.position = headTransform.rotateVector(SCNVector3(0, -2/3, -2))
+        print(headTransform.rotateVector(SCNVector3(1, 0, 0)))
         
         if !indexChanged {
             print("false")
@@ -380,7 +382,8 @@ class VRControllerSwift : NSObject, VRControllerProtocol {
         let skyNode = SCNNode(geometry: skyBox)
         skyNode.name = "skyBox"
         skyNode.position = SCNVector3(0, 0, 0)
-        
+        scene.rootNode.addChildNode(skyNode)
+
 //
 //        // let's create long ray (100 meters) that goes the same way 
 //        // cursor.position is directed 
