@@ -380,7 +380,7 @@
 				INFOPLIST_FILE = VRBoilerplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ua.aab.VRBoilerplate;
+				PRODUCT_BUNDLE_IDENTIFIER = "tiny-planets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VRBoilerplate/VRBoilerplate-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -397,7 +397,7 @@
 				INFOPLIST_FILE = VRBoilerplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ua.aab.VRBoilerplate;
+				PRODUCT_BUNDLE_IDENTIFIER = "tiny-planets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VRBoilerplate/VRBoilerplate-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
