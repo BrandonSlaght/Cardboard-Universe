@@ -1,5 +1,10 @@
 # Cardboard Universe
 
+[![CodeFactor](https://www.codefactor.io/repository/github/brandonslaght/orbits/badge)](https://www.codefactor.io/repository/github/brandonslaght/orbits)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/BrandonSlaght/Tiny-Planets/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs%3F-welcome-green.svg)](https://github.com/BrandonSlaght/Tiny-Planets/compare)
+
+
 This is a simple demo that displays detailed models of planets using Google's VR SDK.  Originally started as a fork of [GVR-SceneKit](https://github.com/AndrianBdn/GVR-SceneKit, "GVR-SceneKit"), a boilerplate app for displaying SceneKit scenes in Google's VR.  
 
 Most of this project was done during a hackathon, so your mileage may vary.
